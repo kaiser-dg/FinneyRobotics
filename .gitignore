@@ -12,6 +12,7 @@ local.properties
 .settings/
 .loadpath
 build/*
+.#*
 
 # Eclipse Core
 .project

@@ -12,7 +12,7 @@ import cpi.autoSupportClasses.Set;
 public class Autonomous extends AutonomousBase{
 	static final String TEST_AUTO_MODE = "test_mode";
 	static final String TEST_DRIVING = "test_driving";
-	
+
 	public static void robotInit(){
 		AutoInputs.robotInit();
 		AutoOutputs.robotInit();
@@ -20,14 +20,15 @@ public class Autonomous extends AutonomousBase{
 		Set.setDefault(TEST_DRIVING);
 		Set.addName(TEST_AUTO_MODE);
 		Set.addName(TEST_DRIVING);
+                Set.addName(AUTO_EXP);
 	}
-	
+
 	public static void autonomousInit(){
 		AutonomousInit();
 		selectAutoMode(autoMode);
 	}
-	
-	
+
+
 	 public static void selectAutoMode(String mode){
 		switch(mode){
 		case(TEST_AUTO_MODE):
@@ -36,19 +37,25 @@ public class Autonomous extends AutonomousBase{
 		case(TEST_DRIVING):
 			Autonomous.testDrive();
 			break;
+                case(AUTO_EXP):
+                    Autonomous.experimentalAuto();
 		}
 	}
 
 
-	
+
 	/////////////////*			FULL AUTONOMOUS MODES			*////////////////////
 	public static void testAutoMode(){
 		autoStates = new SuperClass[][]{
 			{ /*new And( , )*/ }};
 	}
-	
+
 	public static void testDrive(){
 		autoStates = new SuperClass[][]{
 			{ new And(new Auto_Drive(.5), new Time(4)) }};
 	}
+
+    public static void experimentalAuto() {
+        autoStates = new SuperClass[][]{
+            { new And(new Auto_Drive(.5), new Time(5)) }};
 }

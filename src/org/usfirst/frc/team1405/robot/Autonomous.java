@@ -11,7 +11,8 @@ import cpi.autoSupportClasses.Set;
 
 public class Autonomous extends AutonomousBase{
 	static final String TEST_AUTO_MODE = "test_mode";
-	static final String TEST_DRIVING = "test_driving";
+	static final String TEST_DRIVING   = "test_driving";
+        static final String AUTO_EXP       = "experimental_auto";
 
 	public static void robotInit(){
 		AutoInputs.robotInit();
@@ -41,8 +42,7 @@ public class Autonomous extends AutonomousBase{
                     Autonomous.experimentalAuto();
 		}
 	}
-
-
+}
 
 	/////////////////*			FULL AUTONOMOUS MODES			*////////////////////
 	public static void testAutoMode(){

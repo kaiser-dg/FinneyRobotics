@@ -42,7 +42,7 @@ public class Autonomous extends AutonomousBase{
                     Autonomous.experimentalAuto();
 		}
 	}
-}
+
 
 	/////////////////*			FULL AUTONOMOUS MODES			*////////////////////
 	public static void testAutoMode(){
@@ -58,5 +58,5 @@ public class Autonomous extends AutonomousBase{
     public static void experimentalAuto() {
         autoStates = new SuperClass[][]{
             { new And(new Auto_Drive(.5), new Time(6)) }};
-}
-    //Hello
+  }
+}    //Hello

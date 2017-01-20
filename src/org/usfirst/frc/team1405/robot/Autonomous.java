@@ -22,11 +22,13 @@ public class Autonomous extends AutonomousBase{
 		Set.addName(TEST_AUTO_MODE);
 		Set.addName(TEST_DRIVING);
         Set.addName(AUTO_EXP);
+        System.out.println("Init");
 	}
 
 	public static void autonomousInit(){
 		AutonomousInit();
 		selectAutoMode(autoMode);
+		System.out.println("Auto Init");
 	}
 
 
@@ -34,9 +36,11 @@ public class Autonomous extends AutonomousBase{
 		switch(mode){
 		case(TEST_AUTO_MODE):
 			Autonomous.testAutoMode();
+			System.out.println("Wrong 1");
 			break;
 		case(TEST_DRIVING):
 			Autonomous.testDrive();
+			System.out.println("Wrong 2");
 			break;
         case(AUTO_EXP):
         	System.out.println("Case");

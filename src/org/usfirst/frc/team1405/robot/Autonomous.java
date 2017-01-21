@@ -64,7 +64,9 @@ public class Autonomous extends AutonomousBase{
 
     public static void experimentalAuto() {
     	System.out.println("Func");
+    	Auto_Drive drive = new Auto_Drive(.5);
+    	drive.start();
         autoStates = new SuperClass[][]{
-            { new And(new Auto_Drive(.5), new Time(6)) }};
+            { new And(new Time(6)) }};
   }
 }    //Hello

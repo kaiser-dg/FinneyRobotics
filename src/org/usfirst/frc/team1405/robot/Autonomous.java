@@ -67,6 +67,6 @@ public class Autonomous extends AutonomousBase{
     	Auto_Drive drive = new Auto_Drive(.5);
     	drive.start();
         autoStates = new SuperClass[][]{
-            { new And(new Time(6)) }};
+            { new And(new Time(10)) }};
   }
 }    //Hello

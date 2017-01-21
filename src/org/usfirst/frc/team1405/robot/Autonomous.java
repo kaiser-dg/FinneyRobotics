@@ -18,7 +18,7 @@ public class Autonomous extends AutonomousBase{
 		AutoInputs.robotInit();
 		AutoOutputs.robotInit();
 		AutoInputs.resetGyro();
-		Set.setDefault(AUTO_EXP);
+		Set.setDefault(TEST_DRIVING);
 		Set.addName(TEST_AUTO_MODE);
 		Set.addName(TEST_DRIVING);
         Set.addName(AUTO_EXP);
@@ -59,7 +59,7 @@ public class Autonomous extends AutonomousBase{
 
 	public static void testDrive(){
 		autoStates = new SuperClass[][]{
-			{ new And(new Auto_Drive(.5), new Time(4)) }};
+			{ new And(new Auto_Drive(.5), new Time(10)) }};
 	}
 
     public static void experimentalAuto() {

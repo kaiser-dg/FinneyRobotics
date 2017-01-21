@@ -12,7 +12,6 @@ import cpi.autoSupportClasses.Set;
 public class Autonomous extends AutonomousBase{
 	static final String TEST_AUTO_MODE = "test_mode";
 	static final String TEST_DRIVING   = "test_driving";
-    static final String AUTO_EXP       = "experimental_auto";
 
 	public static void robotInit(){
 		AutoInputs.robotInit();
@@ -21,7 +20,6 @@ public class Autonomous extends AutonomousBase{
 		Set.setDefault(TEST_DRIVING);
 		Set.addName(TEST_AUTO_MODE);
 		Set.addName(TEST_DRIVING);
-        Set.addName(AUTO_EXP);
         System.out.println("Init");
 	}
 
@@ -40,13 +38,9 @@ public class Autonomous extends AutonomousBase{
 			break;
 		case(TEST_DRIVING):
 			//Autonomous.testDrive();
-			Autonomous.experimentalAuto();
+			Autonomous.testDrive();
 			System.out.println("Wrong 2");
-			break;
-        case(AUTO_EXP):
-        	System.out.println("Case");
-            Autonomous.experimentalAuto();
-        	break; //so it'l line up
+			//RIP experimentalAuto
 		}
 	}
 

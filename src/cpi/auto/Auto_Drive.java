@@ -1,6 +1,5 @@
 package cpi.auto;
 
-
 public class Auto_Drive extends SuperClass{
 	private double driveSpeed = 0;
 	private double turnSpeed = 0;

@@ -22,8 +22,8 @@ public class Drive {
 
 	right1 =  new MotorController(3);
 	right2 =  new MotorController(4);
-	left1 =  new MotorController(1);
-	left2 =  new MotorController(2);
+	left1  =  new MotorController(1);
+	left2  =  new MotorController(2);
 
 //	centerHTalon1 =  new CANTalon(5);
 //	centerHTalon2 =  new CANTalon(6);
